@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <title>LEMO Tasty</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/main.css" media="screen">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    
+    <body>
+        <header id="hero-image">
+            <div class="hero-text">
+                <img src="img/logo/best.png" alt="foodlogo">
+                <h1>Welcome to Lemo Tasty</h1>
+                <p>Home for tips videos</p>
+                <button onclick="location.href='#coffe'">See More</button>
+            </div>
+        </header>
+            
+        <nav id="transition">
+            <div id="menu">Menu</div>
+            <ul class="navlogo">
+                <li><a style="color:#ffff00">LEMO Food Tasty</a></li>
+            </ul>
+            <ul class="navbar-right">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Menu</a>
+                    <div class="dropdown-content">
+                      <a href="coffe.html">Coffe</a>
+                      <a href="chocolate.html">Chocolate</a>
+                      <a href="food.html">Food</a>
+                    </div>
+                </li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+
+
+        <main>
+            <div id="coffe">
+                <h1>Coffe's</h1>
+                <video autoplay muted loop>
+                    <source src="Video/Raspberry Mocha Latte .mp4" type="video/mp4">
+                </video>
+                <ul>
+                    <li>
+                        <a target="_blank" href="img/preview/coffe/1.png">
+                            <img class="thumbnail" src="img/preview/coffe/1.png" alt="coffes!!!!!">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="img/preview/coffe/2.png">
+                            <img class="thumbnail" src="img/preview/coffe/2.png" alt="coffes!!!!!">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="img/preview/coffe/3.jpg">
+                            <img class="thumbnail" src="img/preview/coffe/3.jpg" alt="coffes!!!!!">
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <button onclick="location.href='coffe.html'">See More</button>
+                    </li>
+                </ul>
+            </div>
+            <div id="chocolate">
+                <h1>Chocolate</h1>
+                <video autoplay muted loop>
+                    <source src="Video/Hot Chocolate London .mp4" type="video/mp4">
+                </video>
+                <ul>
+                    <li>
+                        <a target="_blank" href="img/preview/chocolate/S1.jpg">
+                            <img class="thumbnail" src="img/preview/chocolate/S1.jpg" alt="chocolate!!!!!">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="img/preview/chocolate/S2.jpg">
+                            <img class="thumbnail" src="img/preview/chocolate/S2.jpg" alt="chocolate!!!!!">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="img/preview/chocolate/S3.jpg">
+                            <img class="thumbnail" src="img/preview/chocolate/S3.jpg" alt="chocolate!!!!!">
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <button onclick="location.href='chocolate.html'">See More</button>
+                    </li>
+                </ul>
+            </div>
+            <div id="food">
+                <h1>Food's</h1>
+                <video autoplay muted loop>
+                    <source src="Video/Cheesy Corn Korean Corn Cheese .mp4" type="video/mp4">
+                </video>
+                <ul>
+                    <li>
+                        <a target="_blank" href="img/preview/food/S1.jpg">
+                            <img class="thumbnail" src="img/preview/food/S1.jpg" alt="foods!!!!!">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="img/preview/food/S3.jpg">
+                            <img class="thumbnail" src="img/preview/food/S3.jpg" alt="foods!!!!!">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="img/preview/food/S6.jpg">
+                            <img class="thumbnail" src="img/preview/food/S6.jpg" alt="foods!!!!!">
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <button onclick="location.href='food.html'">See More</button>
+                    </li>
+                </ul>
+            </div>
+        </main>            
+        <footer>    
+            <div class="wrapper">
+                <span>Copyright 2020 &COPY; LEMO</span><br>
+                <a href="https://www.facebook.com/bagus.nandayudahartadi/" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="mailto:agungbagusnanda90@gmail.com" class="fa fa-google"></a><br>                    
+                <a href="#" style="color:white">Privacy Policy</a> | <a href="#" style="color:white">Terms of Use</a>
+            </div>
+        </footer>
+        <script src="js/jquery-3.2.0.min.js"></script>
+        <script>
+            $("#menu").click(function() {
+                $("#transition ul").toggle();
+              });
+              
+        </script>
+        <script>
+            $(document).ready(function(){       
+            var scroll_start = 0;
+            var startchange = $('#transition');
+            var offset = startchange.offset();
+            $(document).scroll(function() { 
+               scroll_start = $(this).scrollTop();
+               if(scroll_start > offset.top) {
+                   $('#transition').css('background-color', 'rgba(34,34,34,0.9)');
+                } else {
+                   $('#transition').css('background-color', 'transparent');
+                }
+            });
+         });
+        </script>
+    </body>
+</html>
